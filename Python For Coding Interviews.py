@@ -153,6 +153,60 @@ queue.pop() # popright()
 print(queue)
 
 
+#***********************************    HASHSET  *****************************************************************************************
+myset = set()
 
+myset.add(1)
+myset.add(2)
+print(myset)
+print(len(myset)) # all these operations like adding, finding the length, removing and searching is done in constant time in hashset
+
+print(1 in myset)
+print(2 in myset)
+print(3 in myset)
+
+myset.remove(2)
+print(2 in myset)
+
+
+# list to set
+print(set([1,2,3])) # as sets dont contain duplicate values, so if passed list has duplicates then those will be removed
+
+# set comprehension
+myset = {i for i in range(5)}
+print(myset)
+
+######################################   HASHMAP  ############################################################################
+mymap = {}
+mymap["alice"] = 88          #initializing the key "alice"
+mymap["bob"] = 77            #initializing the key "bob"
+print(mymap)                 #in this hashmap also the operations are performed in constant time
+print(len(mymap))
+
+mymap["alice"] = 80          #changing the value of key "alice"
+print(mymap["alice"])        
+
+print("alice" in mymap)      #searching for alice in the hashmap (this operation is also performed in constant time)
+mymap.pop("alice")           #removing "alice" by mentioning its key
+print("alice" in  mymap)
+
+mymap = {"alice":90, "bob":70}
+print(mymap)
+
+
+# Dict comprehension
+mymap = {i: 2*i for i in range(5)}
+print(mymap)
+
+# Looping through maps
+mymap = {"alice":90, "bob":70}
+for key in mymap:
+    print(key, mymap[key])
+
+for val in mymap.values():
+    print(val)
+
+for key, val in mymap.items():
+    print(key, val)
 
 
