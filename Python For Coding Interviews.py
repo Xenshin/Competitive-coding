@@ -210,3 +210,24 @@ for key, val in mymap.items():
     print(key, val)
 
 
+# Tuples are like arrays but immutable
+tup = (1,2,3)
+print(tup)
+print(tup[0]) # we can index them
+print(tup[-1])
+
+# can't modify tuples
+'''tup[0] = 0 '''# this won't work
+
+# Can be used as key for hash map/set
+mymap = {(1,2): 3}
+print(mymap[(1,2)])
+
+myset = set()
+myset.add((1,2))
+print(myset)
+print((1,2) in myset)
+
+# lists can't be keys
+'''mymap[[3,4]] = 5''' # this won't work as list is unhashable type
+
